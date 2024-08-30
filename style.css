@@ -1,0 +1,189 @@
+/** Poppins Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator {
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    width: 90%;
+    max-width: 400px; 
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#expression{
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input {
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: 10px 0;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 36px;
+    text-align: right;
+    color: #ffffff;
+    caret-color: transparent;
+}
+
+
+input.blinking-cursor::placeholder {
+    color: transparent; 
+}
+
+.blinking-cursor::after {
+    content: '|'; 
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #ffffff;
+    animation: blink-caret 1s step-start infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+}
+button:active {
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+}
+
+.equalBtn {
+    background-color: #fb7c14;
+}
+
+
+button.operator {
+    color: #6dee0a;
+    transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+}
+
+
+button.operator.clicked {
+    color: #ff0000; 
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.operator {
+    color: #6dee0a;
+}
+
+
+
+/* Tablet devices */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* Adjust font size for tablets */
+    }
+
+    .calculator {
+        width: 80%; /* Adjust width for tablets */
+        max-width: 500px; /* Increase max-width for tablets */
+    }
+}
+
+/* Desktop devices */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px; /* Adjust font size for desktops */
+    }
+
+    .calculator {
+        width: 70%; /* Adjust width for desktops */
+        max-width: 400px; /* Increase max-width for desktops */
+    }
+}
+
+/* Large desktop devices */
+@media (min-width: 1440px) {
+    body {
+        font-size: 22px; /* Adjust font size for large desktops */
+    }
+
+    .calculator {
+        width: 60%; /* Adjust width for large desktops */
+        max-width: 700px; /* Increase max-width for large desktops */
+    }
+}
+
+
+ 
